@@ -1,0 +1,686 @@
+{% extends "header_footer.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- Mirrored from up2client.com/envato/ciri-ai/html/main/MultiPage-CiriAI/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jun 2025 03:42:53 GMT -->
+
+   <!-- ====================================== Section One ===================================== -->
+   <section class="section-one position-relative" id="home">
+      <img class="blue-gardient1" src="{% static 'assets/images/home-page/blue-gardient1.png' %}" alt="blue-gardient1">
+      <img class="blue-gardient2" src="{% static 'assets/images/home-page/blue-gardient2.png' %}" alt="blue-gardient2">
+      <div class="container">
+         <p class="elevate">Elevate Your Experience With</p>
+         <h1 class="bestAI">Best AI logo Generator</h1>
+         <p class="olut" style="margin-bottom: 30px;">Your One-Stop Solution for Generating Logo.</p>
+
+<div class="Generate text-center" style="margin-bottom: 40px;">
+   {% if request.session.id %}
+   <!-- User is logged in: go to generate_logo -->
+   <a href="/genrate_logo/" class="button generate-btn">Generate Logo</a>
+   {% else %}
+   <!-- User is not logged in: go to login -->
+   <a href="/login/" class="button generate-btn">Generate Logo</a>
+   {% endif %}
+</div>
+
+
+         <div class="hometags-main">
+            <p class="popTg">Popular Tags:</p>
+            <a href="#" class="hometags">Creative</a>
+            <a href="#" class="hometags">Sport</a>
+            <a href="#" class="hometags">Animation</a>
+            <a href="#" class="hometags">Fantasy</a>
+         </div>
+      </div>
+      <div class="photo-gallery">
+         <div class="single-img">
+            <img src="{% static 'assets/images/home-page/slider1-img1.jpg' %}" alt="slider1-img1">
+         </div>
+         <div class="single-img multi-img">
+            <img src="{% static 'assets/images/home-page/slider1-img3.jpg' %}" alt="slider1-img3">
+            <img src="{% static 'assets/images/home-page/slider1-img4.jpg' %}" alt="slider1-img4">
+         </div>
+         <div class="single-img">
+            <img src="{% static 'assets/images/home-page/slider1-img2.jpg' %}" alt="slider1-img2">
+         </div>
+         <div class="single-img multi-img">
+            <img src="{% static 'assets/images/home-page/slider1-img5.jpg' %}" alt="slider1-img5">
+            <img src="{% static 'assets/images/home-page/slider1-img6.jpg' %}" alt="slider1-img6">
+         </div>
+         <div class="single-img">
+            <img src="{% static 'assets/images/home-page/slider1-img9.jpg' %}" alt="slider1-img9">
+         </div>
+         <div class="single-img multi-img">
+            <img src="{% static 'assets/images/home-page/slider1-img7.jpg' %}" alt="slider1-img7">
+            <img src="{% static 'assets/images/home-page/slider1-img8.jpg' %}" alt="slider1-img8">
+         </div>
+         <div class="single-img">
+            <img src="{% static 'assets/images/home-page/slider1-img10.jpg' %}" alt="slider1-img10">
+         </div>
+         <div class="single-img multi-img">
+            <img src="{% static 'assets/images/home-page/slider1-img11.jpg' %}" alt="slider1-img11">
+            <img src="{% static 'assets/images/home-page/slider1-img12.jpg' %}" alt="slider1-img12">
+         </div>
+      </div>
+   </section>
+   <!-- ====================================== Section Two ===================================== -->
+   <section class="section-two position-relative">
+      <img class="round-gradient1" src="{% static 'assets/images/home-page/round-gradient1.png' %}" alt="round-gradient1">
+      <div class="container">
+         <h2 class="sec-heding">Our <span>Features</span></h2>
+         <p class="sub-heding">Interdum nec tortor duis sodales amet fermentum. Faucibus ipsum feugiat lectus
+            hendrerit cum eget. Quisque diam massa at quis vestibulum.</p>
+         <div class="row home-features-row">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+               <div class="features-cir-main">
+                  <div class="features-cir">
+                     <img src="{% static 'assets/images/svg/features1.svg' %}" alt="features1">
+                  </div>
+                  <span class="img-bg-circle"></span>
+               </div>
+               <h3 class="gendseratio">High Quality Logo Generation</h3>
+               <p class="eugiat">Create stunning, high-resolution logos instantly with our AI-powered generator—perfect for brands that demand quality and creativity.</p>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+               <div class="features-cir-main">
+                  <div class="features-cir">
+                     <img src="{% static 'assets/images/svg/features2.svg' %}" alt="features2">
+                  </div>
+                  <span class="img-bg-circle"></span>
+               </div>
+               <h3 class="gendseratio">Advanced AI Algorithms</h3>
+               <p class="eugiat">There is no support; the movement depends on being balanced and proper. Free-flowing structure with dignified, graceful alignment.</p>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+               <div class="features-cir-main">
+                  <div class="features-cir">
+                     <img src="{% static 'assets/images/svg/features3.svg' %}" alt="features3">
+                  </div>
+                  <span class="img-bg-circle"></span>
+               </div>
+               <h3 class="gendseratio">Multiple Sizes Supported</h3>
+               <p class="eugiat">Bold structure and purposeful flow—designed with elegance and refined through experience.</p>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+               <div class="features-cir-main">
+                  <div class="features-cir">
+                     <img src="{% static 'assets/images/svg/features4.svg' %}" alt="features4">
+                  </div>
+                  <span class="img-bg-circle"></span>
+               </div>
+               <h3 class="gendseratio">User-Friendly Interface</h3>
+               <p class="eugiat">Strength lies not in force, but in potential. Grounded yet dynamic, with sharp, elegant precision.</p>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+               <div class="features-cir-main">
+                  <div class="features-cir">
+                     <img src="{% static 'assets/images/svg/features5.svg' %}" alt="features5">
+                  </div>
+                  <span class="img-bg-circle"></span>
+               </div>
+               <h3 class="gendseratio">Logo Saving</h3>
+               <p class="eugiat">No excess—just refined balance and purposeful motion. Free-flowing design with elegant structure and dignified presence.</p>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+               <div class="features-cir-main">
+                  <div class="features-cir">
+                     <img src="{% static 'assets/images/svg/features6.svg' %}" alt="features6">
+                  </div>
+                  <span class="img-bg-circle"></span>
+               </div>
+               <h3 class="gendseratio">Flexible Pricing</h3>
+               <p class="eugiat">Bold structure meets refined style—crafted for lasting impact.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ====================================== Section Three ===================================== -->
+   <section class="section-three position-relative pt-0">
+      <img class="round-gradient2" src="{% static 'assets/images/home-page/round-gradient2.png' %}" alt="round-gradient2">
+      <div class="container">
+         <h2 class="ering reveal-text">We're passionate about empowering creatives with the tools they need to bring
+            their vision to life that's why we've developed.</h2>
+         <div class="community-btn-main">
+            <a href="#subscribe" class="button"> Join Community
+               <span class="hoverEffect">
+                  <span></span>
+               </span>
+            </a>
+         </div>
+         <p class="sub-heding glob pt-0">We Worked With Global Largest 10,000+ Brands</p>
+      </div>
+      <div class="logos logos1">
+         <div class="logos-slide ltr">
+            <div class="marquee__content pt-0">
+               <div class="marquee-img-main">
+                  <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo1.png' %}" alt="logo1">
+               </div>
+               <div class="marquee-img-main">
+                  <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo2.png' %}" alt="logo2">
+               </div>
+               <div class="marquee-img-main">
+                  <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo3.png'%}" alt="logo3">
+               </div>
+               <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo4.png' %}" alt="logo4">
+               </div>
+               <div class="marquee-img-main">
+                  <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo5.png' %}" alt="logo5">
+               </div>
+               <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo6.png' %}" alt="logo6">
+               </div>
+               <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo7.png' %}" alt="logo7">
+               </div>
+               <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo8.png' %}" alt="logo8">
+               </div>
+               <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo9.png' %}" alt="logo9">
+               </div>
+               <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo10.png' %}" alt="logo10">
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="logos">
+         <div class="logos-slide rtl">
+            <div class="marquee__content">
+               <div class="marquee-img-main">
+                  <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo1.png ' %}" alt="logo1">
+               </div>
+               <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo2.png' %}" alt="logo2">
+               </div>
+               <div class="marquee-img-main">
+                  <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo3.png' %}" alt="logo3">
+               </div>
+               <div class="marquee-img-main">
+                  <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo4.png' %}" alt="logo4">
+               </div>
+               <div class="marquee-img-main">
+                  <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo5.png' %}" alt="logo5">
+               </div>
+               <div class="marquee-img-main">
+                  <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo6.png'   %}" alt="logo6">
+               </div>
+               <div class="marquee-img-main">
+                  <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo7.png'   %}" alt="logo7">
+               </div>
+               <div class="marquee-img-main">
+                  <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo8.png' %}" alt="logo8">
+               </div>
+               <div class="marquee-img-main">
+                  <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo9.png' %}" alt="logo9">
+               </div>
+               <div class="marquee-img-main">
+                  <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo10.png' %}" alt="logo10">
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ====================================== Section Four ===================================== -->
+   <section class="section-four pt-0 position-relative">
+      <img class="blue-gardient3" src="{% static 'assets/images/home-page/blue-gardient3.png' %}" alt="blue-gardient3">
+      <img class="blue-gardient4" src="{% static 'assets/images/home-page/blue-gardient4.png' %}" alt="blue-gardient4">
+      <div class="container">
+         <h2 class="sec-heding"><span>Elevate Your Craft</span> with Our Suggestion</h2>
+         <p class="sub-heding">Experience a design revolution as our smart suggestions guide you to new heights,
+            transforming your craft into a masterpiece, one suggestion at a time.</p>
+         <div class="wrapper cursor">
+            <div class="sugg-box">
+               <div class="sugg-img-main">
+                    <img class="sugg-img" src="{% static 'assets/images/home-page/sugg-img1.jpg' %}" alt="sugg-img1">
+               </div>
+               <div>
+                  <p class="setpSugg">Step 1</p>
+                  <h3 class="gendseratio flex-pri">Flexible Pricing</h3>
+                  <p class="eugiat flex-pri">Consectetur tellus scelerisque sagittis est sit. Elit sit urna
+                     volutpat eu non lorem eu. Tellus senectus tristique Risus.</p>
+                  <div class="tryImage-btn-main">
+                     <a href="/genrate_logo/" class="button"> try logo 
+                        <span class="hoverEffect">
+                           <span></span>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="sugg-box">
+               <div class="sugg-img-main">
+                  <img class="sugg-img" src="{% static 'assets/images/home-page/sugg-img2.jpg' %}" alt="sugg-img2">
+               </div>
+               <div>
+                  <p class="setpSugg">Step 2</p>
+                  <h3 class="gendseratio flex-pri">Input options and style</h3>
+                  <p class="eugiat flex-pri">In the realm of creative alchemy, browse through a large library and
+                     pick a style that suits your idea perfectly.</p>
+                  <div class="tryImage-btn-main">
+                     <a href="/genrate_logo/" class="button"> Try logo 
+                        <span class="hoverEffect">
+                           <span></span>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="sugg-box">
+               <div class="sugg-img-main">
+                  <img class="sugg-img" src="{% static 'assets/images/home-page/sugg-img3.jpg' %}" alt="sugg-img3">
+               </div>
+               <div>
+                  <p class="setpSugg">Step 3</p>
+                  <h3 class="gendseratio flex-pri">Create art with your idea</h3>
+                  <p class="eugiat flex-pri">Click to generate a special masterpiece that goes beyond the usual and
+                     captures your imagination.</p>
+                  <div class="tryImage-btn-main">
+                     <a href="/genrate_logo/" class="button"> Try logo 
+                        <span class="hoverEffect">
+                           <span></span>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ====================================== Section Five ===================================== -->
+   <section class="section-five pt-0">
+      <div class="logos sldkjf">
+         <div class="logos-slide ltr">
+            <div class="marquee__content pt-0">
+               <div class="vis-tex vis-tex1">
+                    <img class="brand-logos" src="{% static 'assets/images/home-page/flower.png' %}" alt="logo1">
+                  <h2>Take Your Visuals to the</h2>
+               </div>
+               <div class="vis-tex vis-tex2">
+                    <img class="brand-logos" src="{% static 'assets/images/home-page/flower.png' %}" alt="logo2">
+                  <h2>AI Image Generator</h2>
+               </div>
+               <div class="vis-tex vis-tex3">
+                    <img class="brand-logos" src="{% static 'assets/images/home-page/flower.png' %}" alt="logo3">
+                  <h2>Next Level</h2>
+               </div>
+               <div class="vis-tex vis-tex2">
+                  <img class="brand-logos" src="{% static 'assets/images/home-page/flower.png' %}" alt="logo2">
+                  <h2>AI Image Generator</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ====================================== Section Six ===================================== -->
+   <section class="section-six pt-0  overflow-hidden">
+      <div class="container">
+         <h2 class="sec-heding">Powerful AI Features Built for<span> Marketing</span></h2>
+         <p class="sub-heding">We're passionate about empowering creatives with the tools they need to bring their
+            vision to life that's why we've developed.</p>
+         <div class="row marketingRow">
+            <div class="col-xxl-6 col-xl-6">
+               <p class="dui pb-2">Sit dui ligula viverra eget volutpat mauris. Nibh sagittis viverra et rhoncus
+                  bibendum luctus. Tristique interdum cursus dictum gravida sed feugiat morbi. Id est sed urna
+                  maecenas est placerat aliquam et quis. Feugiat vitae justo mi justo nunc senectus sapien non.
+               </p>
+               <p class="dui">Sit dui ligula viverra eget volutpat mauris. Nibh sagittis viverra et rhoncus
+                  bibendum luctus. Tristique interdum cursus dictum gravida sed feugiat morbi. Id est sed urna
+                  maecenas est placerat aliquam et quis. Feugiat vitae justo mi justo nunc senectus sapien non.
+                  Tristique tellus ac proin integer. Vitae elementum vitae sem arcu. Lorem aliquam.
+               </p>
+            </div>
+            <div class="col-xxl-6 col-xl-6">
+               <div class="quis-head">
+                  <div class="features-cir-main quis-main">
+                     <div class="features-cir quis">
+                        <img src="{% static 'assets/images/svg/check.svg' %}" alt="check">
+                     </div>
+                     <span class="img-bg-circle quis-bg-cir"></span>
+                  </div>
+                  <h3 class="quis-text-list">Quis sit in id egestas turpis vitae tristique senectus</h3>
+               </div>
+               <div class="quis-head">
+                  <div class="features-cir-main quis-main">
+                     <div class="features-cir quis">
+                        <img src="{% static 'assets/images/svg/check.svg' %}" alt="check">
+                     </div>
+                     <span class="img-bg-circle quis-bg-cir"></span>
+                  </div>
+                  <h3 class="quis-text-list">Neque eleifend amet ut vel fusce facilisis nulla</h3>
+               </div>
+               <div class="quis-head">
+                  <div class="features-cir-main quis-main">
+                     <div class="features-cir quis">
+                        <img src="{% static 'assets/images/svg/check.svg' %}" alt="check">
+                     </div>
+                     <span class="img-bg-circle quis-bg-cir"></span>
+                  </div>
+                  <h3 class="quis-text-list">Nulla at diam cursus lorem nunc facilisis non phasellus</h3>
+               </div>
+               <div class="quis-head mb-0">
+                  <div class="features-cir-main quis-main">
+                     <div class="features-cir quis">
+                        <img src="{% static 'assets/images/svg/check.svg' %}" alt="check">
+                     </div>
+                     <span class="img-bg-circle quis-bg-cir"></span>
+                  </div>
+                  <h3 class="quis-text-list">Nullam faucibus facilisis nunc turpis adipiscing</h3>
+               </div>
+            </div>
+         </div>
+         <div class="video-container"></div>
+            <img class="blue-gardient6" src="{% static 'assets/images/home-page/blue-gardient6.png' %}" alt="blue-gardient6">
+            <img class="blue-gardient5" src="{% static 'assets/images/home-page/blue-gardient5.png' %}" alt="blue-gardient5">
+            <video autoplay loop muted class="home-sec-one-video">
+                    <source src="{% static 'assets/video/video1.mp4' %}" type="video/mp4">
+            </video>
+            <a href="/about/" class="text-circle-main">
+                  <img class="text-circle" src="{% static 'assets/images/home-page/text-circle.png' %}" alt="text-circle">
+                  <img class="bg-down-arrow" src="{% static 'assets/images/svg/bg-down-arrow.svg' %}" alt="bg-down-arrow">
+            </a>
+         </div>
+         <div class="row whyChooseSec">
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+               <h2 class="sec-heding whyChoose"><span>Why Choose Us:</span> Discover Our AI’s Power</h2>
+               <p class="dui pb-2">Embark on a journey of visual innovation as you delve into the realm of the AI
+                  Image Generator. This revolutionary tool harnesses the prowess of advanced algorithms to breathe
+                  life into your imagination.
+               </p>
+               <p class="dui">Unleash your creativity and witness the power of AI Image Generator as it transforms
+                  ideas into mesmerizing images.
+               </p>
+               <div class="tryImage-btn-main grnezQ">
+                  <a href="#" class="button"> Generate Your Image
+                     <span class="hoverEffect">
+                        <span></span>
+                     </span>
+                  </a>
+               </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+               <div class="exce-box">
+                  <span class="exce-box-ciecl" id="exce-box1"></span>
+                  <div class="excellent">
+                      <p><img src="{% static 'assets/images/svg/excellent.svg' %}" alt="excellent">Excellent Support</p>
+                  </div>
+                  <h3 class="rnaip">Amet id urna ipsum donec amet. Diam sapien a convallis vestibulum condimentum
+                     sit. Elementum sodales scelerisque.</h3>
+               </div>
+               <div class="exce-box">
+                  <span class="exce-box-ciecl" id="exce-box2"></span>
+                  <div class="excellent">
+                     <p><img src="{% static 'assets/images/svg/reliable.svg' %}" alt="reliable">Reliable Expert</p>
+                  </div>
+                  <h3 class="rnaip">Amet id urna ipsum donec amet. Diam sapien a convallis vestibulum condimentum
+                     sit. Elementum sodales scelerisque.</h3>
+               </div>
+               <div class="exce-box mb-0">
+                  <span class="exce-box-ciecl" id="exce-box3"></span>
+                  <div class="excellent">
+                      <p><img src="{% static 'assets/images/svg/unique.svg' %}" alt="unique">Unique Technology</p>
+                  </div>
+                  <h3 class="rnaip">Amet id urna ipsum donec amet. Diam sapien a convallis vestibulum condimentum
+                     sit. Elementum sodales scelerisque.</h3>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ====================================== Section Seven ===================================== -->
+   <section class="section-seven position-relative">
+      <img class="slider-gardient-blue" src="{% static 'assets/images/home-page/blue-gardient6.png' %}" alt="blue-gardient6">
+      <img class="slider-gardient-blue2" src="{% static 'assets/images/home-page/blue-gardient2.png' %}" alt="blue-gardient2">
+      <div class="container">
+         <h2 class="sec-heding people-sa">What Creatives People Are <span>Saying About Us</span></h2>
+         <p class="sub-heding">In user speeches about Power AI on our image generator site, creativity takes the
+            stage, showcasing the visual brilliance this tool unlocks.</p>
+         <div class="sayAboutSlider">
+            {%for data in f%}
+         <div class="sayAboutSlider">
+            <div class="slide-box">
+               <div class="d-flex justify-content-center">
+                    <img src="{% static 'assets/images/home-page/star.png' %}" alt="star">
+               </div>
+               <h2 class="beco">“{{data.comment}}.”
+               </h2>
+               <p class="hoea">{{data.name}}</p>
+            </div>
+         </div>
+         {%endfor%}
+         </div>
+      </div>
+      <img class="client-img1" src="{% static 'assets/images/home-page/client-img1.jpg' %}" alt="client-img1">
+      <img class="client-img2" src="{% static 'assets/images/home-page/client-img2.jpg' %}" alt="client-img2">
+      <img class="client-img3" src="{% static 'assets/images/home-page/client-img3.jpg' %}" alt="client-img3">
+      <img class="client-img4" src="{% static 'assets/images/home-page/client-img4.jpg' %}" alt="client-img4">
+      <img class="client-img5" src="{% static 'assets/images/home-page/client-img5.jpg' %}" alt="client-img5">
+      <img class="client-img6" src="{% static 'assets/images/home-page/client-img6.jpg' %}" alt="client-img6">
+   </section>
+   <!-- ====================================== Section Eight ===================================== -->
+   <section class="section-eight pt-0">
+      <div class="overflow-hidden">
+         <svg class="curve-svg" xmlns="http://www.w3.org/2000/svg" width="1920" height="102" viewBox="0 0 1920 102"
+            fill="none">
+            <path d="M0 101C0 101 423.5 1 960 1C1496.5 1 1920 101 1920 101" stroke="url(#paint0_linear_82_634)"
+               stroke-width="2" />
+            <defs>
+               <linearGradient id="paint0_linear_82_634" x1="0" y1="51" x2="1920" y2="51"
+                  gradientUnits="userSpaceOnUse">
+                  <stop offset="0.1" stop-color="#02000B" />
+                  <stop offset="0.495" stop-color="white" />
+                  <stop offset="0.9" stop-color="#02000B" />
+               </linearGradient>
+            </defs>
+         </svg>
+      </div>
+      
+   <!-- ====================================== Section Nine ===================================== -->
+   <section class="section-nine">
+      <div class="container">
+         <div class="row">
+            <div class="col-xxl-5 col-xl-5 col-lg-5">
+               <h2 class="sec-heding quest"><span> Questions? </span><br> We have Answers</h2>
+               <p class="dui seci">Explore our FAQ secion, your quick guide to essential insights and
+                  solutions, addressing the most common queries about Power AI.
+               </p>
+            </div>
+            <div class="col-xxl-7 col-xl-7 col-lg-7">
+               <div class="accordion faq" id="accordionExample">
+                  <div class="accordion-item">
+                     <h2 class="accordion-header asd" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                           How can I get started with Ciri AI’s services?
+                        </button>
+                     </h2>
+                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           Quis nisi vitae quam cursus facilisis. Arcu eget tincidunt augue auctor mattis. Id
+                           pharetra quis pellentesque tristique mattis morbi ut etiam purus. Semper suspendisse
+                           et justo nisl tellus faucibus pharetra. Semper ullamcorper eu sit velit.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header asd" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                           Ciri AI provide automated service?
+                        </button>
+                     </h2>
+                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
+                           ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
+                           Augue neque gravida in fermentum et sollicitudin.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header asd" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                           Are there any discounts for annual subscriptions?
+                        </button>
+                     </h2>
+                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
+                           ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
+                           Augue neque gravida in fermentum et sollicitudin.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item">
+                     <h2 class="accordion-header asd" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                           data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                           How can I get technical support if I encounter issues?
+                        </button>
+                     </h2>
+                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
+                           ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
+                           Augue neque gravida in fermentum et sollicitudin.
+                        </div>
+                     </div>
+                  </div>
+                  <div class="accordion-item ">
+                     <h2 class="accordion-header asd" id="headingFive">
+                        <button class="accordion-button collapsed border-bottom-0 pb-0" type="button"
+                           data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                           aria-controls="collapseFive">
+                           Is there an API for integration with other platforms?
+                        </button>
+                     </h2>
+                     <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           Donec massa sapien faucibus et molestie ac. Sed blandit libero volutpat sed cras
+                           ornare arcu. Vulputate mi sit amet mauris. Integer enim neque volutpat ac tincidunt.
+                           Augue neque gravida in fermentum et sollicitudin.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="tryImage-btn-main grnezQ mb-0">
+                  <a href="/faq/" class="button"> Read More FAQs
+                     <span class="hoverEffect">
+                        <span></span>
+                     </span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ====================================== Section Subscribe ===================================== -->
+   <section class="section-subscribe position-relative">
+      <img class="blurek" src="{% static 'assets/images/home-page/blue-gardient7.png' %}" alt="blue-gardient7">
+      <img class="blurek2" src="{% static 'assets/images/home-page/blue-gardient5.png' %}" alt="blue-gardient5">
+      <div class="container position-relative">
+          <img class="robot" src="{% static 'assets/images/home-page/robot.jpg' %}" alt="robot">
+         <video autoplay loop muted class="home-sec-two-video2">
+            <source src="{% static 'assets/video/video2.mp4' %}" type="video/mp4">
+         </video>
+         <div class="cretive-box">
+            <h2 class="sec-heding">Ready To Start Creating Stunning <br><span> Images With Ciri AI?</span></h2>
+            <p class="sub-heding"> Sign up today and unlock the full potential of our tool. With a range processing
+               techniques and features at your fingerprints, you’ll be amazed what you will achieved.</p>
+            <div class="community-btn-main mb-0">
+               <a href="/index/" class="button"> Get Started Now
+                  <span class="hoverEffect">
+                     <span></span>
+                  </span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <div class="subs-sec" id="subscribe">
+      <div class="container">
+         <div class="row fassd-row">
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+               <h2 class="sec-heding quest"><span> Subscribe </span><br> for the Updates!</h2>
+               <p class="dui seci">Elementum mauris platea congue sit dictum. Ultrices sed tristique
+                  fringilla aenean malesuada.
+               </p>
+               <div class="sub-scjsd-inp-main">
+                  <input type="text" placeholder="Enter Email Address" name="Enter Email Address" autocapitalize="off">
+                  <a href="#" class="button subscribeBtn">Subscribe
+                     <span class="hoverEffect">
+                        <span></span>
+                     </span>
+                  </a>
+               </div>
+               <div class="footer-checkbox-sec">
+                  <input class="footer-checkbox-input" id="footer-checkbox" type="checkbox">
+                  <label for="footer-checkbox" class="footer-chec-txt">I agree to the
+                     <a href="#">Privacy Policy.</a>
+                  </label>
+               </div>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6 faasd">
+               <div class="position-relative">
+                    <img class="fantasy1" src="{% static 'assets/images/home-page/fantasy1.jpg' %}" alt="fantasy1">
+                  <img class="fantasy2" src="{% static 'assets/images/home-page/fantasy2.jpg' %}" alt="fantasy2">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- ====================================== Section Blog ===================================== -->
+   <section class="section-blog pt-0 position-relative">
+      <img class="blog-gardient" src="{% static 'assets/images/home-page/blue-gardient5.png' %}" alt="blue-gardient5">
+      <div class="container">
+         <h2 class="sec-heding">The Latest <span> News & Blog</span></h2>
+         <p class="sub-heding">Congue sed pharetra proin purus quis vehicula sit. In bibendum volutpat dictum
+            pulvinar faucibus nulla. Neque sed augue praesent tristique ac gravida commodo.
+         </p>
+         <div class="row home-blog-row">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+               <a href="/blogDetails/" class="blog-box-col">
+                  <div class="blog-img-box">
+                      <img class="blog-img" src="{% static 'assets/images/blog-page/blog-img1.jpg' %}" alt="blog-img1">
+                     <p class="date-blog">Feb 25, 2025</p>
+                  </div>
+                  <h2 class="eque">Neque duis aliquam pellentesque nam turpis volutpat volutpat.</h2>
+                  <p class="ilisis">Quis nisi vitae quam cursus facilisis. Arcu eget tincidunt augue auctor
+                     mattis. Id pharetra quis pellentesque tristique mattis morbit velit.</p>
+               </a>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+               <a href="/blogDetails/" class="blog-box-col">
+                  <div class="blog-img-box">
+                      <img class="blog-img" src="{% static 'assets/images/blog-page/blog-img2.jpg' %}" alt="blog-img2">
+                     <p class="date-blog">Feb 20, 2025</p>
+                  </div>
+                  <h2 class="eque">Cursus iaculis convallis id malesuada libero commodo.</h2>
+                  <p class="ilisis">Urna urna ut consequat ut massa aliquet ipsum quam. Urna lectus ut in ac diam
+                     cras viverra. Urna urna ut consequat ut massa aliquet</p>
+               </a>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+               <a href="/blogDetails/" class="blog-box-col">
+                  <div class="blog-img-box">
+                     <img class="blog-img" src="{% static 'assets/images/blog-page/blog-img3.jpg' %}" alt="blog-img3">
+                     <p class="date-blog">Feb 15, 2025</p>
+                  </div>
+                  <h2 class="eque">Sagittis lectus sed aliquam at proin quis aliquam vitae.</h2>
+                  <p class="ilisis">Ullamcorper facilisis sit sed sollicitudin faucibus in fermentum neque.
+                     Malesuada accumsan Ullamcorper facilisis sit sed sollicitudin faucibus.</p>
+               </a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- ====================================== Section Footer ===================================== -->
+   {% endblock %}

@@ -1,0 +1,29 @@
+{% extends "header_footer.html" %}
+{% load static %}
+
+{% block content %}
+<section class="py-5 text-center">
+  <div class="container">
+    <div class="alert alert-success shadow p-4 rounded" role="alert">
+      <h2 class="mb-3">🎉 Payment Successful!</h2>
+      <p>Thank you for your purchase. Your transaction has been completed successfully.</p>
+      <a href="/index/" class="btn btn-primary mt-3">Back to Home</a>
+    </div>
+  </div>
+</section>
+<script>
+    let seconds = 10;
+    const countdownElement = document.getElementById('countdown');
+    
+    const countdownInterval = setInterval(() => {
+      seconds--;
+      countdownElement.textContent = seconds;
+      if (seconds <= 0) {
+        clearInterval(countdownInterval);
+        window.location.href = "/index/";
+      }
+    }, 1000);
+  </script>
+</body>
+
+{% endblock %}

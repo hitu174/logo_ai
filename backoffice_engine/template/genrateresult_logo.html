@@ -1,0 +1,167 @@
+{% extends 'header_footer.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Generated Logo</title>
+  <link rel="stylesheet" href="{% static 'css/generate_image.css' %}" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0d0e0f, #0a1b1d);
+      color: #fff;
+    }
+
+    .form-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 80px 15px;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .form-container h1 {
+      font-size: 24px;
+      margin-bottom: 25px;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-top: 15px;
+      font-size: 13px;
+      color: #dcdcdc;
+    }
+
+    .readonly-input,
+    textarea.readonly-input {
+      width: 100%;
+      margin-top: 6px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 14px;
+      resize: none;
+    }
+
+    textarea.readonly-input {
+      height: 90px;
+      line-height: 1.4;
+    }
+
+    .sample-images {
+      margin-top: 30px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .sample-images h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .images-grid {
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-card {
+      padding: 15px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .generated-img {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .btn-group {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .btn-group a {
+      margin: 0 10px;
+    }
+
+    @media (max-width: 576px) {
+      .form-container {
+        padding: 20px;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<div class="form-wrapper">
+  <div class="form-container">
+    <h1>Your Generated Logo</h1>
+
+    {% if error %}
+      <div class="alert alert-danger" style="color: red; font-weight: bold; margin-bottom: 10px;">
+        {{ error }}
+      </div>
+    {% endif %}
+
+    {% if category %}
+      <label>Category</label>
+      <input type="text" class="readonly-input" value="{{ category.name }}" readonly>
+    {% endif %}
+
+    {% if instruction %}
+      <label>Instruction</label>
+      <textarea class="readonly-input" readonly>{{ instruction }}</textarea>
+    {% endif %}
+
+    {% if creativity %}
+      <label>Creativity (%)</label>
+      <input type="text" class="readonly-input" value="{{ creativity }}" readonly>
+    {% endif %}
+
+    {% if remaining_credits is not None %}
+      <p style="margin-top: 10px; font-weight: bold;">
+        Remaining Credits: {{ remaining_credits }}
+      </p>
+    {% endif %}
+  </div>
+</div>
+
+{% if generated_image_url %}
+  <div class="sample-images">
+    <h2>Generated Result</h2>
+    <div class="images-grid">
+      <div class="image-card">
+        <img src="{{ generated_image_url.url }}" alt="Generated Image" class="generated-img">
+      </div>
+    </div>
+    <div class="btn-group">
+      <a href="/genrate_logo/" class="btn btn-light">Generate More</a>
+      <a href="/gallery/" class="btn btn-light">Go to Gallery</a>
+    </div>
+  </div>
+{% endif %}
+
+{% endblock %}

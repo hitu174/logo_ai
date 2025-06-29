@@ -1,0 +1,107 @@
+/* General body styling for dark theme */
+body {
+    background-color: #0a0a12;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Profile Section */
+.profile-section {
+    padding: 3rem 1rem;
+}
+
+.profile-card {
+    background-color: #11111a;
+    border: 1px solid #222;
+    border-radius: 15px;
+    color: #fff;
+}
+
+/* Profile Icon Navigation */
+.main-menu__list li a img {
+    transition: transform 0.3s ease;
+}
+
+.main-menu__list li a:hover img {
+    transform: scale(1.1);
+}
+
+/* User Icon and Name */
+.text-center img {
+    border-radius: 50%;
+    background-color: #1a1a2e;
+    padding: 10px;
+}
+
+/* Form Input Fields */
+.form-control {
+    background-color: #1a1a2e;
+    border: 1px solid #444;
+    color: #ffffff;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+.form-control:focus {
+    border-color: #00ffe5;
+    box-shadow: 0 0 0 0.2rem rgba(0, 255, 229, 0.25);
+}
+
+/* Form Labels */
+.form-label {
+    color: #ccc;
+    font-weight: 500;
+}
+
+/* Update Profile Button */
+.button {
+    background: linear-gradient(90deg, #00f0ff, #7d2ae8);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background: linear-gradient(90deg, #7d2ae8, #00f0ff);
+    transform: scale(1.02);
+}
+
+/* Logout Button */
+.button2 {
+    text-align: center;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.button2:hover {
+    opacity: 0.85;
+}
+
+/* Delete Button */
+.btn-danger {
+    background-color: #e60023;
+    border: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #cc001f;
+}
+
+/* Responsive Tweak */
+@media (max-width: 768px) {
+    .profile-card {
+        padding: 2rem 1rem;
+    }
+}

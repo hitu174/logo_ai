@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Logo AI</title>
+  <link rel="icon" href="{% static 'assets/images/svg/favicon.svg' %}" type="image/x-icon">
+
+  <!-- Logo AI Stylesheets -->
+  <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/swap.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/media_query.css' %}">
+
+  <!-- Optional: Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(to right, #141e30, #243b55);
+      font-family: 'Poppins', sans-serif;
+    }
+    .form-control::placeholder {
+      color: #ccc;
+    }
+    .btn-info {
+      background-color: #17a2b8;
+      border: none;
+    }
+    .btn-info:hover {
+      background-color: #138496;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Login Form Section -->
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="w-100" style="max-width: 500px;">
+    <div class="bg-dark bg-opacity-50 p-4 rounded shadow">
+    
+        <form method="POST" action="/login/">
+        {% csrf_token %}
+        <h2 class="text-center text-white mb-4">Sign In</h2>
+
+        {% if messages %}
+        <div class="mb-3">
+          {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} text-danger">{{ message }}</div>
+        {% endfor %}
+
+        </div>
+        {% endif %}
+
+        <div class="mb-3">
+          <input type="text" name="email" class="form-control" placeholder="Email" required autocomplete="off">
+        </div>
+        <div class="mb-4">
+          <input type="password" name="password" class="form-control" placeholder="Password" required autocomplete="off">
+        </div>
+
+        <button type="submit" class="btn btn-info w-100 text-white">Login</button>
+
+        <p class="text-center text-light mt-3 mb-1">
+          <a href="/forgot/" class="text-info">Forgot password?</a>
+        </p>
+        <p class="text-center text-light">
+          Don’t have an account?
+          <a href="/signup/" class="text-info">Sign Up</a>
+        </p>
+      </form>
+
+      <!-- Image Below the Form -->
+      <img src="{% static 'assets/images/home-page/form-img1.jpg' %}" alt="Login Image"
+           class="img-fluid rounded mt-4">
+    </div>
+  </div>
+</div>
+
+<!-- JS Scripts -->
+<script src="{% static 'assets/javascript/jquery.js' %}"></script>
+<script src="{% static 'assets/javascript/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/javascript/slick.min.js' %}"></script>
+<script src="{% static 'assets/javascript/script.js' %}"></script>
+
+</body>
+</html>

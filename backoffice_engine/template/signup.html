@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sign Up | Logo AI</title>
+   <link rel="icon" href="{% static 'assets/images/svg/favicon.svg' %}" type="image/x-icon">
+   <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+   <link rel="stylesheet" href="{% static 'assets/css/swap.css' %}">
+   <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+   <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+   <link rel="stylesheet" href="{% static 'assets/css/media_query.css' %}">
+
+   <style>
+     body {
+       background: linear-gradient(to right, #141e30, #243b55);
+       min-height: 100vh;
+       margin: 0;
+       padding: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       color: #fff;
+     }
+     .form-container {
+       background-color: rgba(0, 0, 0, 0.5);
+       padding: 2rem;
+       border-radius: 10px;
+       box-shadow: 0 0 10px rgba(0,0,0,0.3);
+     }
+     .form-control {
+       background-color: rgba(255, 255, 255, 0.05);
+       color: #fff;
+       border: 1px solid rgba(255, 255, 255, 0.2);
+     }
+     .form-control::placeholder {
+       color: rgba(255, 255, 255, 0.6);
+     }
+     .form-control:focus {
+       outline: none;
+       box-shadow: none;
+       border-color: #17a2b8;
+     }
+     .btn-info {
+       background-color: #17a2b8;
+       border: none;
+     }
+     .btn-info:hover {
+       background-color: #138496;
+     }
+     .text-info:hover {
+       color: #fff;
+     }
+   </style>
+</head>
+
+<body>
+
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="w-100" style="max-width: 500px;">
+    <div class="form-container">
+      <form method="POST" action="">
+        {% csrf_token %}
+        <h2 class="text-center text-white mb-4">Create an account</h2>
+
+        {% if messages %}
+        <div class="messages">
+          {% for message in messages %}
+            <div class="alert {% if message.tags == 'error' %}alert-danger{% elif message.tags == 'success' %}alert-success{% endif %}">{{ message }}</div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="mb-3">
+          <input type="text" name="name" class="form-control" placeholder="Username" required autocomplete="off">
+        </div>
+        <div class="mb-3">
+          <input type="text" name="mobile_number" class="form-control" placeholder="Mobile Number" required pattern="^[0-9]{10,15}$" title="Enter a valid mobile number (10–15 digits)" autocomplete="off">
+        </div>
+        <div class="mb-3">
+          <input type="email" name="email" class="form-control" placeholder="Email" required autocomplete="off">
+        </div>
+        <div class="mb-4">
+          <input type="password" name="password" class="form-control" placeholder="Password" required autocomplete="off">
+        </div>
+
+        <button type="submit" class="btn btn-info w-100 text-white">Sign Up</button>
+
+        <p class="text-center text-light mt-3">
+          Already have an account?
+          <a href="/login/" class="text-info">Sign In</a>
+        </p>
+      </form>
+
+      <!-- Signup illustration -->
+      <img src="{% static 'assets/images/home-page/form-img2.jpg' %}" alt="Signup Illustration"
+           class="img-fluid rounded mt-4">
+    </div>
+  </div>
+</div>
+
+<!-- JS Scripts -->
+<script src="{% static 'assets/javascript/jquery.js' %}"></script>
+<script src="{% static 'assets/javascript/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/javascript/slick.min.js' %}"></script>
+<script src="{% static 'assets/javascript/script.js' %}"></script>
+
+</body>
+</html>

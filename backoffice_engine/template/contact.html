@@ -1,0 +1,51 @@
+{% extends 'header_footer.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- ====================================== Section Blog ===================================== -->
+   <section class="section-blog pt-0 position-relative">
+    <img class="blog-gardient" src="{% static 'assets/images/home-page/blue-gardient5.png' %}" alt="blue-gardient5">
+    <div class="container">
+        <h2 class="sec-heding">The Latest <span> News & Blog</span></h2>
+        <p class="sub-heding">Congue sed pharetra proin purus quis vehicula sit. In bibendum volutpat dictum
+            pulvinar faucibus nulla. Neque sed augue praesent tristique ac gravida commodo.
+        </p>
+        <div class="row home-blog-row">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <a href="{% static 'blogDetails.html' %}" class="blog-box-col">
+                    <div class="blog-img-box">
+                        <img class="blog-img" src="{% static 'assets/images/blog-page/blog-img1.jpg' %}" alt="blog-img1">
+                        <p class="date-blog">Feb 25, 2025</p>
+                    </div>
+                    <h2 class="eque">Neque duis aliquam pellentesque nam turpis volutpat volutpat.</h2>
+                    <p class="ilisis">Quis nisi vitae quam cursus facilisis. Arcu eget tincidunt augue auctor
+                        mattis. Id pharetra quis pellentesque tristique mattis morbit velit.</p>
+                </a>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <a href="{% static 'blogDetails.html' %}" class="blog-box-col">
+                    <div class="blog-img-box">
+                        <img class="blog-img" src="{% static 'assets/images/blog-page/blog-img2.jpg' %}" alt="blog-img2">
+                        <p class="date-blog">Feb 20, 2025</p>
+                    </div>
+                    <h2 class="eque">Cursus iaculis convallis id malesuada libero commodo.</h2>
+                    <p class="ilisis">Urna urna ut consequat ut massa aliquet ipsum quam. Urna lectus ut in ac diam
+                        cras viverra. Urna urna ut consequat ut massa aliquet</p>
+                </a>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                <a href="{% static 'blogDetails.html' %}" class="blog-box-col">
+                    <div class="blog-img-box">
+                        <img class="blog-img" src="{% static 'assets/images/blog-page/blog-img3.jpg' %}" alt="blog-img3">
+                        <p class="date-blog">Feb 15, 2025</p>
+                    </div>
+                    <h2 class="eque">Sagittis lectus sed aliquam at proin quis aliquam vitae.</h2>
+                    <p class="ilisis">Ullamcorper facilisis sit sed sollicitudin faucibus in fermentum neque.
+                        Malesuada accumsan Ullamcorper facilisis sit sed sollicitudin faucibus.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- ====================================== Section Footer ===================================== -->
+{% endblock %}

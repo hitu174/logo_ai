@@ -1,0 +1,109 @@
+{% extends 'header_footer.html' %}    
+{% load static %}  
+{% block content %}
+{% load mathfilters %}
+
+
+<section class="section-eight pt-0">
+      <div class="overflow-hidden">
+         <svg class="curve-svg" xmlns="http://www.w3.org/2000/svg" width="1920" height="102" viewBox="0 0 1920 102"
+            fill="none">
+            <path d="M0 101C0 101 423.5 1 960 1C1496.5 1 1920 101 1920 101" stroke="url(#paint0_linear_82_634)"
+               stroke-width="2" />
+            <defs>
+               <linearGradient id="paint0_linear_82_634" x1="0" y1="51" x2="1920" y2="51"
+                  gradientUnits="userSpaceOnUse">
+                  <stop offset="0.1" stop-color="#02000B" />
+                  <stop offset="0.495" stop-color="white" />
+                  <stop offset="0.9" stop-color="#02000B" />
+               </linearGradient>
+            </defs>
+         </svg>
+      </div>
+      <div class="container">
+         <h2 class="sec-heding">Get A<span> Special Price</span> For You</h2>
+         <p class="sub-heding">Congue sed pharetra proin purus quis vehicula sit. In bibendum volutpat dictum
+            pulvinar faucibus nulla. Neque sed augue praesent tristique ac gravida commodo.</p>
+         <nav class="tabs-btn">
+            <div class="clear"></div>
+         </nav>
+         <div class="tabContainer">
+            <div id="one" class="Tabcondent active">
+               <div class="row team-page-row">
+                    {% for data in plans %}
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
+                            <div class="plan-body">
+                                <div class="plan-header">
+                                <span class="plain-greiesd-bg" id="price1"></span>
+                                <h2 class="plan-text">{{data.name}}</h2>
+                                <h3 class="plan-price">$ {{data.price}} <sub>/Month</sub></h3>
+                                <h3 class="basicLevelPro">{{data.description}}</h3>
+                                <h3 class="text-center small">Duration Days = {{data.duration_days}}</h3>
+                                </div>
+                                <ul>
+                                <li><span>credit = {{data.credit}}</span></li>
+                                <li>Access to Essential Templates</li>
+                                <li>Email Support Only</li>
+                                <li>Standard Resolution Output</li>
+                                </ul>
+                                <form
+                                 class="text-center border border-light p-5"
+                                 action="/paymentsuccessful/"
+                                 method="POST"
+          >
+                                 {% csrf_token %}
+
+                                 <input
+                                 type="hidden"
+                                 name="plan"
+                                 id="plan"
+                                 required
+                                 class="form-control mb-4"
+                                 placeholder="Name"
+                                 value="{{data.id}}"
+                                 />
+
+                                 <input
+                                 type="hidden"
+                                 name="id"
+                                 id="id"
+                                 required
+                                 class="form-control mb-4"
+                                 placeholder="Name"
+                                 value="{{request.session.id}}"
+                                 />
+
+                                 <!-- RAZORPAY INTEGRATION HERE -->
+
+                                 <script
+                                 src="https://checkout.razorpay.com/v1/checkout.js"
+                                 data-key="rzp_test_fqdatGJr5z3Ry3"
+                                 data-amount="{{data.price|mul:100}}"
+                                 data-currency="INR"
+                                 data-order_id="{{payment.id}}"
+                                 data-buttontext="Pay with razorpay"
+                                 data-name="LOGOAi"
+                                 data-url_root="https://eneqd3r9zrjok.x.pipedream.net/"
+                                 ,
+                                 data-description="LOGOAI is best site to gentrate logo"
+                                 data-image="/client_static/assets/images/shop/logo2.png"
+                                 data-prefill.name="vedang"
+                                 data-prefill.email="patelvedang88@gmail.com"
+                                 data-theme.color="#F37254"
+                                 ></script>
+                                </form>
+                                <div class="pricing-btn">
+                                <a href="#" class="button" id="pay-btn" > Get Started
+                                <span class="hoverEffect"><span></span></span>
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+{% endblock %}
