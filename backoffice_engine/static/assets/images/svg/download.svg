@@ -1,0 +1,25 @@
+<svg width="130" height="48" viewBox="0 0 130 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Purple bot-like crescent shape -->
+    <path d="M14 24C14 15.1634 21.1634 8 30 8C30.5523 8 31 8.44772 31 9C31 9.55228 30.5523 10 30 10C22.8203 10 17 15.8203 17 23C17 30.1797 22.8203 36 30 36C30.5523 36 31 36.4477 31 37C31 37.5523 30.5523 38 30 38C21.1634 38 14 30.8366 14 22Z" fill="url(#paint0_linear)"></path>
+    
+    <!-- Left eye -->
+    <rect x="27" y="18" width="4" height="4" rx="1" fill="#00F0C8"></rect>
+    <!-- Right eye -->
+    <rect x="34" y="18" width="4" height="4" rx="1" fill="#00F0C8"></rect>
+  </g>
+
+  <!-- Text: Logo Ai -->
+  <g transform="translate(45, 15)" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">
+    <text x="0" y="12">Logo</text>
+    <text x="0" y="26">Ai</text>
+  </g>
+
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="paint0_linear" x1="14" y1="8" x2="14" y2="38" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7928CA"></stop>
+      <stop offset="1" stop-color="#4C1D95"></stop>
+    </linearGradient>
+  </defs>
+</svg>

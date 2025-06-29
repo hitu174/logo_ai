@@ -1,0 +1,102 @@
+{% extends 'header_footer.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback</title>
+  <link rel="stylesheet" href="{% static 'css/feedback.css' %}">
+  <style>
+    body {
+      background: linear-gradient(to right, #141e30, #243b55);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+    }
+
+    .feedback-container {
+      max-width: 600px;
+      margin: 100px auto 60px auto;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+
+    .feedback-container h2 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      color: #ffffff;
+    }
+
+    .feedback-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .feedback-textarea {
+      min-height: 120px;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: #fff;
+      resize: vertical;
+    }
+
+    .feedback-textarea::placeholder {
+      color: #ccc;
+    }
+
+    .submit-btn {
+      background: #00bcd4;
+      color: #fff;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: #0097a7;
+    }
+
+    .success-message {
+      margin-bottom: 20px;
+      color: #00e676;
+      font-weight: 500;
+    }
+
+    @media (max-width: 600px) {
+      .feedback-container {
+        padding: 25px;
+        margin: 60px 15px;
+      }
+    }
+  </style>
+</head>
+
+<main>
+  <div class="feedback-container">
+    <h2>Feedback</h2>
+    {% if feedback_sent %}
+      <div class="success-message">
+        ✅ Feedback sent successfully!
+      </div>
+    {% endif %}
+    <form class="feedback-form" method="POST" action="/feedback/">
+      {% csrf_token %}
+      <textarea name="feedback" class="feedback-textarea" placeholder="Enter your feedback, suggestions or comments here..."></textarea>
+      <button type="submit" class="submit-btn">Submit Feedback</button>
+    </form>
+  </div>
+</main>
+
+{% endblock %}
