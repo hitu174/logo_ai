@@ -138,3 +138,5 @@ EMAIL_HOST_PASSWORD = 'nlph xsrr sfwg yhgw'
 #############
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Umang Here
