@@ -1,0 +1,161 @@
+{% extends 'header_footer.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Logo Gallery</title>
+  <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+  <style>
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .gallery-wrapper {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .gallery-title {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 40px;
+      color: #ffffff;
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .gallery-item {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      max-width: 220px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-box {
+      display: flex;
+      flex-direction: row;
+      background: #1e1e1e;
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 800px;
+      width: 90%;
+      gap: 20px;
+    }
+
+    .modal-left img {
+      max-width: 300px;
+      border-radius: 12px;
+    }
+
+    .modal-right {
+      color: #fff;
+      text-align: left;
+      flex: 1;
+    }
+
+    .modal-right h2 {
+      margin-top: 0;
+      font-size: 24px;
+      border-bottom: 1px solid #444;
+      padding-bottom: 10px;
+    }
+
+    .modal-right p {
+      margin: 12px 0;
+      font-size: 16px;
+    }
+
+    .close {
+      font-size: 28px;
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .modal-box {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .modal-left img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<div class="gallery-wrapper">
+  <h1 class="gallery-title">Your Created Logos</h1>
+
+  <div class="gallery-container">
+    {% for image in images %}
+    
+      <img src="{{image.image.url}}" height="200px"/>
+      <!-- <div class="gallery-item"
+           onclick="openModal('{{ image.image }}', '{{ image.category }}', '{{ image.instruction }}', '{{ image.creativity }}')">
+        <img src="{{ image.image }}" alt="Generated Logo">
+      </div> -->
+    {% empty %}
+      <p style="color: #ccc;">No logos generated yet.</p>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-box">
+    <div class="modal-left">
+      <img id="modalImage" src="" alt="Full Logo">
+    </div>
+    <div class="modal-right">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Logo Details</h2>
+      <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+      <p><strong>Instruction:</strong> <span id="modalInstruction"></span></p>
+      <p><strong>Creativity:</strong> <span id="modalCreativity"></span></p>
+    </div>
+  </div>
+</div>
+
+<script src="{% static 'js/gallery.js' %}"></script>
+{% endblock %}

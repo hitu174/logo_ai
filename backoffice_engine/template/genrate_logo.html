@@ -1,0 +1,85 @@
+{% extends 'header_footer.html' %}
+{% load static %}
+{% block content %}
+
+<!-- ✅ Use consistent gradient background across pages -->
+<section class="py-5" style="background: linear-gradient(to right, #0d0e0f, #0a1b1d);">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="form-wrapper p-4 shadow rounded">
+                    <div class="text-center mb-4">
+                        <h2 class="form-heading text-white">Logo AI Generator</h2>
+                        <p class="form-subheading text-white">Enter your instructions to generate a unique logo.</p>
+                    </div>
+
+                    <form method="POST" action="/genrateresult_logo/">
+                        {% csrf_token %}
+
+                        <div class="mb-3">
+                            <label for="category" class="form-label text-white">Category</label>
+                            <select id="category" name="category" class="form-control bg-transparent text-white border-light" required>
+                                {% for cat in category %}
+                                    <option value="{{ cat.id }}" style="background-color: black; color: white;">
+                                        {{ cat.name }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="instruction" class="form-label text-white">Instruction</label>
+                            <textarea id="instruction" name="instruction" class="form-control bg-transparent text-white border-light" rows="4" placeholder="Describe your logo..." required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="creativity" class="form-label text-white">Creativity (%)</label>
+                            <input type="number" class="form-control bg-transparent text-white border-light" id="creativity" name="creativity" min="0" max="100" placeholder="Enter creativity between 0 to 100" required>
+                        </div>
+
+                        <div class="text-end">
+                            <button type="submit" class="button">
+                                Generate Logo
+                                <span class="hoverEffect"><span></span></span>
+                            </button>
+                        </div>
+                        
+                        {% if messages %}
+                        <div class="row mt-5">
+                            <div class="col-lg-12">
+                                <h4 class="text-center text-white mb-4">{{ messages }}</h4>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sample Logos Section -->
+        <div class="row mt-5">
+            <div class="col-lg-12">
+                <h4 class="text-center text-white mb-4">Sample Generated Logos</h4>
+                
+                <div class="single-img multi-img">
+                    <img src="{% static 'assets/images/home-page/slider1-img3.jpg' %}" alt="slider1-img3">
+                    <img src="{% static 'assets/images/home-page/slider1-img4.jpg' %}" alt="slider1-img4">
+                </div>
+                <div class="single-img multi-img">
+                    <img src="{% static 'assets/images/home-page/slider1-img5.jpg' %}" alt="slider1-img5">
+                    <img src="{% static 'assets/images/home-page/slider1-img6.jpg' %}" alt="slider1-img6">
+                </div>
+
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo1.png' %}" alt="logo1">
+                </div>
+                <div class="marquee-img-main">
+                    <img class="brand-logos" src="{% static 'assets/images/maquee-logo/logo2.png' %}" alt="logo2">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
